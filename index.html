@@ -1,19 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naqshify Studio</title>
-</head>
-<body style="margin:0;font-family:Arial;background:#111827;color:white;display:flex;justify-content:center;align-items:center;height:100vh;">
 
-<div style="text-align:center;">
-    <h1>🎨 Naqshify Studio</h1>
-    <p>Professional Online Graphic Design Platform</p>
-    <button style="padding:15px 30px;font-size:18px;border:none;border-radius:10px;background:#D4AF37;color:#111;cursor:pointer;">
-        Start Designing
-    </button>
-</div>
+    <title>Naqshify Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fabric.js -->
+    <script src="https://cdn.jsdelivr.net/npm/fabric@5.3.0/dist/fabric.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <header class="topbar">
+
+        <div class="logo">
+            🎨 Naqshify Studio
+        </div>
+
+        <nav class="menu">
+
+            <button id="newBtn">New</button>
+
+            <button id="saveBtn">Save</button>
+
+            <button id="exportBtn">PNG</button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Main Layout -->
+
+    <main class="editor">
+
+
+        <!-- Left Sidebar -->
+
+        <aside class="sidebar">
+
+            <h3>TOOLS</h3>
+
+            <button id="textBtn">
+                📝 Text
+            </button>
+
+            <button id="imageBtn">
+                🖼 Image
+            </button>
+
+            <button id="shapeBtn">
+                ⬜ Shape
+            </button>
+
+            <button id="deleteBtn">
+                🗑 Delete
+            </button>
+
+            <hr>
+
+            <input
+                type="color"
+                id="colorPicker"
+                value="#000000">
+
+            <input
+                type="number"
+                id="fontSize"
+                value="30"
+                min="10"
+                max="150">
+
+        </aside>
+
+
+
+        <!-- Canvas -->
+
+        <section class="canvas-area">
+
+            <canvas
+                id="designCanvas"
+                width="900"
+                height="600">
+            </canvas>
+
+        </section>
+
+
+
+        <!-- Right Panel -->
+
+        <aside class="properties">
+
+            <h3>Properties</h3>
+
+            <p>
+                Select any object
+            </p>
+
+            <hr>
+
+            <p>Position</p>
+
+            <p>Size</p>
+
+            <p>Rotation</p>
+
+            <p>Color</p>
+
+        </aside>
+
+
+    </main>
+
+
+
+    <!-- Bottom -->
+
+    <footer class="statusbar">
+
+        Ready...
+
+    </footer>
+
+
+    <!-- Image Upload -->
+
+    <input
+        type="file"
+        id="imageInput"
+        accept="image/*"
+        hidden>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
